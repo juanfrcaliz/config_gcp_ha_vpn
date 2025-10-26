@@ -5,3 +5,5 @@
 environments/*/.terraform
 environments/*/.terraform.lock.hcl
 terraform.tfplan
+*.bkp
+*.dtmp
