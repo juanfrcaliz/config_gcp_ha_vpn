@@ -6,30 +6,30 @@ terraform {
       version = "~> 5.0"
     }
     random = {
-        source = "hashicorp/random"
-        version = "~> 3.0"
+      source  = "hashicorp/random"
+      version = "~> 3.0"
     }
   }
 }
 
 provider "google" {
   project = var.project_id
-  region  = var.region1  # Primary region
+  region  = var.region1 # Primary region
 }
 
 resource "random_password" "tunnel0_shared_secret" {
-  length = 32
+  length  = 32
   special = true
-  upper = true
-  lower = true
+  upper   = true
+  lower   = true
   numeric = true
 }
 
 resource "random_password" "tunnel1_shared_secret" {
-  length = 32
+  length  = 32
   special = true
-  upper = true
-  lower = true
+  upper   = true
+  lower   = true
   numeric = true
 }
 
@@ -46,7 +46,7 @@ module "network" {
 
 module "compute" {
   source = "./modules/compute"
-  
+
   zone1 = var.zone1
   zone2 = var.zone2
 

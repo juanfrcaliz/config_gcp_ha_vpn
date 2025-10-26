@@ -1,13 +1,13 @@
 variable "zone1" {
   description = "AZ for first compute instance"
   type        = string
-  default     = "us-east1-a"
+  default     = "us-centra1-a"
 }
 
 variable "zone2" {
   description = "AZ for second compute instance"
   type        = string
-  default     = "us-east1-b"
+  default     = "us-east1-a"
 }
 
 variable "compute_instance_image" {
@@ -24,25 +24,25 @@ variable "compute_instance_machine_type" {
 
 variable "vpc_cloud_network_id" {
   description = "Cloud network ID"
-  type = string
+  type        = string
 }
 
 variable "cloud_subnet1_id" {
   description = "Cloud subnet 1 ID"
-  type = string
+  type        = string
 }
 
 variable "cloud_subnet2_id" {
   description = "Cloud subnet 2 ID"
-  type = string
+  type        = string
 }
 
 variable "vpc_onprem_network_id" {
   description = "VPC on-prem network ID"
-  type = string
+  type        = string
 }
 
 variable "onprem_subnet1_id" {
   description = "On-prem subnet 1 ID"
-  type = string
+  type        = string
 }
