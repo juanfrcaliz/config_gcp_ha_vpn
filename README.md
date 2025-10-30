@@ -15,16 +15,6 @@ Both networks are connected to each other through a GCP High Availability VPN: 2
 
 To deploy this infrastructure, you need to have `terraform` installed. Look at instructions [here](https://developer.hashicorp.com/terraform/install).
 
-After that, you need to authenticate into GCP with:
-```sh
-gcloud auth application-default login
-```
-
-And your GCP project needs to have the following APIs entabled:
-
-- Compute Engine API
-- VPC API
-
 ### Playing around
 
 To mess around the code, you can use the `local` configuration. Go to `./environments/local/` and run:
@@ -49,6 +39,16 @@ terraform validate
 to check that the project doesn't contain syntax errors.
 
 ### Deployment in GCP
+
+Before deploying, you need to authenticate into GCP with:
+```sh
+gcloud auth application-default login
+```
+
+And your GCP project needs to have the following APIs entabled:
+
+- Compute Engine API
+- VPC API
 
 First, you need to go to `environments/remote` and copy `terraform.tfvars.sample` as `terraform.tfvars`. Then set the project ID:
 ```conf
